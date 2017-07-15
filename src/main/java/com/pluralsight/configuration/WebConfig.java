@@ -24,7 +24,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
-
+        registry.addResourceHandler("/pdfs/**").addResourceLocations("/WEB-INF/pdf");
 	}
 }
