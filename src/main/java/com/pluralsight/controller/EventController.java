@@ -17,5 +17,4 @@ public class EventController {
         model.addAttribute("event", event);
         return "event";
     }
-
 }
