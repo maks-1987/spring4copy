@@ -28,5 +28,4 @@ public class WebAppInitializer implements WebApplicationInitializer {
         context.register(WebConfig.class);
         return context;
     }
-
 }
