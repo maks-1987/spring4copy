@@ -6,8 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
+@SessionAttributes("event")
 public class EventController {
 
     @RequestMapping(value = "/event", method = RequestMethod.GET)
@@ -20,6 +22,6 @@ public class EventController {
     }
     @RequestMapping(value = "/event", method = RequestMethod.POST)
     public  String processEvent(@ModelAttribute("event") Event event) {
-        return "event";
+        return "redirect:index.html";
     }
 }
