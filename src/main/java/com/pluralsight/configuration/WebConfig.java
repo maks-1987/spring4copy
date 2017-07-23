@@ -1,7 +1,5 @@
 package com.pluralsight.configuration;
 
-import com.sun.corba.se.spi.resolver.LocalResolver;
-import org.springframework.cglib.core.Local;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +9,6 @@ import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
 import java.util.Locale;
 
 @Configuration
@@ -27,7 +24,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		return messageSource;
 	}
 	@Bean
-	public LocalResolver localResolver() {
+	public SessionLocaleResolver localResolver() {
 		SessionLocaleResolver resolver = new SessionLocaleResolver();
 		resolver.setDefaultLocale(Locale.ENGLISH);
 		return resolver;
