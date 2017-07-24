@@ -24,7 +24,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		return messageSource;
 	}
 	@Bean
-	public SessionLocaleResolver localResolver() {
+	public SessionLocaleResolver localeResolver() {
 		SessionLocaleResolver resolver = new SessionLocaleResolver();
 		resolver.setDefaultLocale(Locale.ENGLISH);
 		return resolver;
