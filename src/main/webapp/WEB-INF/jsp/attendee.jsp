@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <%--@declare id="textinput1"--%><%--@declare id="textinput2"--%><a href="?language=en">
+    <%--@declare id="textinput1"--%><%--@declare id="textinput2"--%><%--@declare id="textinput3"--%><a href="?language=en">
         English
     </a>
     <a href="?language=es">
@@ -38,6 +38,11 @@
     <form:input path="emailAddress" cssErrorClass="error"/>
     <form:errors path="emailAddress" cssClass="error"/>
     <br>
+    <label for="textinput3"><spring:message code="attendee.phone"/>:</label>
+    <form:input path="phone" cssErrorClass="error"/>
+    <form:errors path="phone" cssClass="error"/>
+    <br>
+
     <input type="submit" class="btn" value="Enter Attendee"/>
 </form:form>
 

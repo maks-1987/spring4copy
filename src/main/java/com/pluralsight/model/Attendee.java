@@ -1,6 +1,7 @@
 package com.pluralsight.model;
 
 
+import com.pluralsight.view.Phone;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -14,6 +15,17 @@ public class Attendee {
     @NotEmpty
     @Email
     private String emailAddress;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    @NotEmpty
+    @Phone
+    private String phone;
 
     public String getName() {
         return name;
